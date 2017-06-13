@@ -3,21 +3,19 @@ Label based logger for javascript. Allows to enable specific logs command identi
 
 # Usage
 
-* import log_service.js and log_level.js
-* create logservice
-* query a logger with label to log service
+* import LogService and LogLevel
+* query a logger with label to LogService
 * use the logger
 
 # example
 ```
-import LogService from 'log_service.js';
-import level from 'log_level.js';
+import { LogService } from 'index.js';
+import { LogLevel } from 'index.js';
 
-const logS = new LogService(level.DEBUG);
-const logger = logS.getLogger("DB");
+const logger = LogService.getLogger("DB");
 
 logger.log("prova"); // print nothing because label DB is not active
-logS.active("DB");
+LogService.active("DB");
 
 logger.log("test"); // prints "[DB]: test"
 ```

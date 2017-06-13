@@ -18,7 +18,6 @@ export default class LogService {
     this._level = level;
     this._loggers = {};
     this._settings = {};
-    window.logger = this; // enable run time label activation
     LogService.instance = this;
   }
 

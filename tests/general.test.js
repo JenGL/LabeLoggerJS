@@ -1,11 +1,12 @@
-import LogService from '../src/log_service';
-import level from '../src/log_levels';
+import LogService from '../src/logger/log_service';
+import level from '../src/logger/log_levels';
 
 
 describe("Logger", function () {
   let logService;
   beforeEach(function () {
     logService = new LogService(level.SILENT);
+    window.logger = logService;
     spyOn(console, 'log');
     spyOn(console, 'debug');
   });
