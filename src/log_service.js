@@ -14,13 +14,15 @@ export default class LogService {
    * @param level The desired log level.
    */
   constructor(level) {
+    if (LogService.instance != null) return LogService.instance;
     this._level = level;
     this._loggers = {};
     this._settings = {};
     window.logger = this; // enable run time label activation
+    LogService.instance = this;
   }
 
-  set level(level){
+  set level(level) {
     this._level = level;
   }
 
