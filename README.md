@@ -5,7 +5,17 @@ Label based logger for javascript. Allows to enable specific logs command identi
 
 * import LogService and LogLevel
 * query a logger with label to LogService
-* use the logger
+* use the logger (log command are the same of console commands: .debug(), .log(), .info(), .warn(), .error())
+
+There are 5 possible log levels that enable/disable log methods.
+A disabled methods prints nothing.
+An enabled method prints nothing if the used logger's label is not active.
+
+* DEBUG: enable every log method
+* VERBOSE: enable every log method but .debug()
+* WARN: enable .warn() and .error() methods
+* ERROR: enable only .error() method
+* SILENT: disable every method
 
 # example
 
