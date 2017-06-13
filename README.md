@@ -20,8 +20,7 @@ An enabled method prints nothing if the corresponding logger's label is not acti
 # example
 
 ```
-import { LogService } from 'index.js';
-import { LogLevel } from 'index.js';
+import { LogService,  LogLevel} from 'index.js';
 
 const logger = LogService.getLogger("DB");
 
