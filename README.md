@@ -8,6 +8,7 @@ Label based logger for javascript. Allows to enable specific logs command identi
 * use the logger
 
 # example
+
 ```
 import { LogService } from 'index.js';
 import { LogLevel } from 'index.js';
