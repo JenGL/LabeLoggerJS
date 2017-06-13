@@ -1,0 +1,46 @@
+{
+  "name": "labeloggerjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "karma start",
+    "pretest": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenGL/LabeLoggerJS.git"
+  },
+  "author": "Gian Luca Cecchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JenGL/LabeLoggerJS/issues"
+  },
+  "homepage": "https://github.com/JenGL/LabeLoggerJS#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
+    "jasmine-ajax": "^3.3.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-webpack": "^2.0.1",
+    "webpack": "~2.6.1",
+    "webpack-dashboard": "^0.2.1",
+    "webpack-dev-server": "^2.2.0",
+    "webpack-merge": "^2.6.1",
+    "worker-loader": "^0.8.0"
+  }
+}
