@@ -1,6 +1,6 @@
 /**
  * This class implements the Logger service.
- * It exposes the same method of the console object and enable/disable them base on the chosen loglevel.
+ * It exposes the same method of the console object
  *
  * @class
  */
