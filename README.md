@@ -4,12 +4,13 @@ Label based logger for javascript. Allows to enable specific logs command identi
 # Usage
 
 * import LogService and LogLevel
-* query a logger with label to LogService
-* use the logger (log command are the same of console commands: debug, log, info, warn, error)
+* query a logger with the desired label to LogService
+* use the logger (log commands are the same of the console object: debug, log, info, warn, error)
 
-There are 5 possible log levels that enable/disable log methods.
+There are 5 possible levels that enable/disable log methods.
 A disabled method prints nothing.
-An enabled method prints nothing if the corresponding logger's label is not active.
+An enabled method prints nothing if the corresponding label is not active.
+To activate a label use LogService.activate(label).
 
 * DEBUG: enable every log method
 * VERBOSE: enable every log method but .debug()
@@ -25,7 +26,7 @@ import { LogService,  LogLevel} from 'index.js';
 LogService.level = LogLevel.VERBOSE;
 const logger = LogService.getLogger("DB");
 
-logger.log("prova"); // print nothing because label DB is not active
+logger.log("prova"); // prints nothing because label DB is not active
 LogService.active("DB");
 
 logger.log("test"); // prints "[DB]: test"
