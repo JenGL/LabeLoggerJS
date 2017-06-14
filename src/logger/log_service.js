@@ -1,4 +1,5 @@
 import Logger from './log_wrapper';
+import ConcreteLogger from './logger.js';
 
 /**
  * This class implements the Logger service.
@@ -14,7 +15,8 @@ export default class LogService {
    * @param level The desired log level.
    */
   constructor(level) {
-    if (LogService.instance != null) return LogService.instance;
+    if (LogService.instance) return LogService.instance;
+    this._concreteLoggerClass = ConcreteLogger;
     this._level = level;
     this._loggers = {};
     this._settings = {};
@@ -48,5 +50,13 @@ export default class LogService {
 
   deactive(label) {
     this._settings[label] = false;
+  }
+
+  set Logger(ConcreteLoggerClass){
+    this._concreteLoggerClass = ConcreteLoggerClass;
+  }
+
+  get Logger(){
+    return this._concreteLoggerClass;
   }
 }

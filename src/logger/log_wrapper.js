@@ -1,4 +1,3 @@
-import Logger from './logger';
 import level from './log_levels';
 
 /**
@@ -17,7 +16,7 @@ export default class LoggerWrapper {
    */
   constructor(label, service) {
     this.label = label;
-    this.logger = new Logger();
+    this.logger = new service.Logger();
     this._logService = service;
   }
 

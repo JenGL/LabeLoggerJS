@@ -22,6 +22,7 @@ An enabled method prints nothing if the corresponding logger's label is not acti
 ```
 import { LogService,  LogLevel} from 'index.js';
 
+LogService.level = LogLevel.VERBOSE;
 const logger = LogService.getLogger("DB");
 
 logger.log("prova"); // print nothing because label DB is not active
